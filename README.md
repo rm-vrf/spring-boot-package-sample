@@ -136,8 +136,8 @@ Main-Class: org.springframework.boot.loader.JarLauncher
 
 运行 `executable jar` 的时候，Spring Boot 会创建一个特殊的类加载器：`org.springframework.boot.loader.LaunchedURLClassLoader`. 这个类加载器在两个位置加载类：`BOOT-INF/classes/`, `BOOT-INF/lib/*`, 开发者自定义的类和依赖项就保存在这两个位置。
 
->> 这种类加载规则是 Spring Boot 独有的。有时候开发者需要使用其他的类加载器，如果没有严格遵守类加载器 “双亲委派模型”，有可能造成类加载错误。
->> 这时候可以选择其他的打包技术，比如 `fatjar`.
+> 这种类加载规则是 Spring Boot 独有的。有时候开发者需要使用其他的类加载器，如果没有严格遵守类加载器 “双亲委派模型”，有可能造成类加载错误。
+> 这时候可以选择其他的打包技术，比如 `fatjar`.
 
 Spring Boot 把程序打包成 `executable jar` 有很多好处，除了刚才说到的开发调试方便之外，还有其他优点：
 
